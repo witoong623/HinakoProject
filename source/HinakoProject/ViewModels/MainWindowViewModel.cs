@@ -44,20 +44,20 @@ namespace HinakoProject.ViewModels
                 AudioVolumeSetting.HeadphoneVolume.Value = AudioEndpointClient.Current.Volume;
                 AudioEndpointClient.Current.Volume = AudioVolumeSetting.SpeakerVolume.Value;
 
-                ((App)Application.Current).CloseWindow();
+                ((App)Application.Current).HideWindow();
             }
             else if (SelectedEndpoint == "Headphone")
             {
                 AudioVolumeSetting.SpeakerVolume.Value = AudioEndpointClient.Current.Volume;
                 AudioEndpointClient.Current.Volume = AudioVolumeSetting.HeadphoneVolume.Value;
 
-                ((App)Application.Current).CloseWindow();
+                ((App)Application.Current).HideWindow();
             }
         }
 
         public void ActionCancel()
         {
-            ((App)Application.Current).CloseWindow();
+            ((App)Application.Current).HideWindow();
         }
 
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")

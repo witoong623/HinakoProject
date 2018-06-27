@@ -9,7 +9,7 @@
         xmlns:viewModels="clr-namespace:HinakoProject.ViewModels"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel}"
-        Title="MainWindow"
+        Title="HinakoProject"
         Height="350"
         Width="300">
     <Grid>
