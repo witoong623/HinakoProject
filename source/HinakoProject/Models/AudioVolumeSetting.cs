@@ -11,10 +11,10 @@ namespace HinakoProject.Models
     public class AudioVolumeSetting
     {
         public static SerializableProperty<float> SpeakerVolume { get; }
-            = new SerializableProperty<float>(GetKey(), SettingsProviders.Local, 0.35f);
+            = new SerializableProperty<float>(GetKey(), SettingsProviders.Local, 0.35f) { AutoSave = true };
 
         public static SerializableProperty<float> HeadphoneVolume { get; }
-            = new SerializableProperty<float>(GetKey(), SettingsProviders.Local, 0.04f);
+            = new SerializableProperty<float>(GetKey(), SettingsProviders.Local, 0.04f) { AutoSave = true };
 
         private static string GetKey([CallerMemberName] string caller = "")
         {
